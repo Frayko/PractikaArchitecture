@@ -53,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				970E9BEB2752213300E61032 /* Application */,
+				970E9BEF2752231600E61032 /* Modules */,
 				970E9BEC2752214200E61032 /* Resourses */,
 			);
 			path = PractikaArchitecture;
@@ -75,6 +76,13 @@
 				970E9BE0275220F900E61032 /* Assets.xcassets */,
 			);
 			path = Resourses;
+			sourceTree = "<group>";
+		};
+		970E9BEF2752231600E61032 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
