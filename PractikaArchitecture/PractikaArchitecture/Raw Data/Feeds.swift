@@ -6,7 +6,7 @@
 //
 
 final class Feeds {
-	private let feeds = [Feed]()
+	private var feeds = [Feed]()
 	
 	init() {
 		setFeeds()
