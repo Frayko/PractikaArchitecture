@@ -52,13 +52,13 @@
 		970E9BD6275220F900E61032 /* PractikaArchitecture */ = {
 			isa = PBXGroup;
 			children = (
-				970E9BEB2752213300E61032 /* Applictation */,
+				970E9BEB2752213300E61032 /* Application */,
 				970E9BEC2752214200E61032 /* Resourses */,
 			);
 			path = PractikaArchitecture;
 			sourceTree = "<group>";
 		};
-		970E9BEB2752213300E61032 /* Applictation */ = {
+		970E9BEB2752213300E61032 /* Application */ = {
 			isa = PBXGroup;
 			children = (
 				970E9BD7275220F900E61032 /* AppDelegate.swift */,
@@ -66,7 +66,7 @@
 				970E9BE2275220F900E61032 /* LaunchScreen.storyboard */,
 				970E9BE5275220F900E61032 /* Info.plist */,
 			);
-			path = Applictation;
+			path = Application;
 			sourceTree = "<group>";
 		};
 		970E9BEC2752214200E61032 /* Resourses */ = {
@@ -291,7 +291,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CM9MMHDPYX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PractikaArchitecture/Info.plist;
+				INFOPLIST_FILE = PractikaArchitecture/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -319,7 +319,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CM9MMHDPYX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PractikaArchitecture/Info.plist;
+				INFOPLIST_FILE = PractikaArchitecture/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
