@@ -24,7 +24,7 @@ final class FeedViewCell: UITableViewCell {
 		self.imageView?.contentMode = .scaleAspectFit
 		self.detailTextLabel?.textColor = .label
 		self.detailTextLabel?.numberOfLines = 2
-		self.backgroundColor = .systemFill
+		self.backgroundColor = .systemBackground
 	}
 
 	private func configureImage() {
@@ -35,8 +35,8 @@ final class FeedViewCell: UITableViewCell {
 	override func layoutSubviews() {
 		super.layoutSubviews()
 		self.imageView?.frame = .init(x: 10, y: 10, width: 52, height: 52)
-		self.textLabel?.frame.origin = .init(x: 80, y: 0)
-		self.detailTextLabel?.frame.origin = .init(x: 80, y: 30)
+		self.textLabel?.frame.origin = .init(x: 80, y: 16)
+		self.detailTextLabel?.frame.origin = .init(x: 80, y: 43)
 	}
 }
 

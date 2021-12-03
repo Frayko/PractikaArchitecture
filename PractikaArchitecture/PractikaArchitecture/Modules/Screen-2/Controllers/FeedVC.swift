@@ -8,11 +8,11 @@
 import UIKit
 
 final class FeedVC: UIViewController {
-	//private var feedView: FeedViewCell?
 	private var feedModel: FeedModel?
+	private let feeds: [Feed]
 	
 	init() {
-		//self.customView = MyCustomView(frame: UIScreen.main.bounds)
+		self.feeds = Feeds.getFeeds()
 		self.feedModel = FeedModel()
 		super.init(nibName: nil, bundle: nil)
 	}
@@ -24,14 +24,12 @@ final class FeedVC: UIViewController {
 
 	private lazy var tableView: UITableView = {
 		let tableView = UITableView(frame: .zero, style: .plain)
-		tableView.rowHeight = 70
+		tableView.rowHeight = 93
 		tableView.register(FeedViewCell.self, forCellReuseIdentifier: FeedViewCell.identifier)
 		tableView.delegate = self
 		tableView.dataSource = self
 		return tableView
 	}()
-
-	private let feeds = Feeds().getFeeds() //Friend.sampleData
 
 	override func loadView() {
 		self.view = tableView

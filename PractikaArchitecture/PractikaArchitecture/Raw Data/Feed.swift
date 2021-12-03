@@ -5,7 +5,10 @@
 //  Created by Александр Фомин on 27.11.2021.
 //
 
+import Foundation
+
 struct Feed {
+	let id = UUID()
 	let imageName: String
 	let title: String
 	let author: String

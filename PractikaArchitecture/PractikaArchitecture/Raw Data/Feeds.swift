@@ -5,23 +5,34 @@
 //  Created by Александр Фомин on 27.11.2021.
 //
 
+import Foundation
+
 final class Feeds {
-	private var feeds = [Feed]()
-	
-	init() {
-		setFeeds()
-	}
+	private static var feeds: [Feed] = {
+		var feeds = [Feed]()
+		feeds.append(RawFeeds.feed1)
+		feeds.append(RawFeeds.feed2)
+		feeds.append(RawFeeds.feed3)
+		feeds.append(RawFeeds.feed4)
+		
+		return feeds
+	}()
 }
 
 extension Feeds {
-	func getFeeds() -> [Feed] {
+	static func getFeeds() -> [Feed] {
 		feeds
+	}
+	
+	static func getFeed(id: UUID) -> Feed? {
+		let feed = feeds.filter { $0.id == id }.first
+		
+		return feed
 	}
 }
 
-private extension Feeds {
-	func setFeeds() {
-		feeds.append(Feed(imageName: "name",
+enum RawFeeds {
+	static let feed1 = Feed(imageName: "name",
 						  title: "Header",
 						  author: "Author",
 						  description_mini: "He'll want to use your yacht, and I don't want this thing smelling like fish.",
@@ -35,9 +46,9 @@ private extension Feeds {
 		Ullamco laborum qui sint officia officia ad Lorem culpa minim voluptate occaecat id duis esse. Ullamco sunt magna consectetur excepteur. Id cupidatat proident ex ad elit laboris. Nulla aute sit occaecat laboris. Laboris minim aliquip exercitation elit commodo ipsum et fugiat sit anim laborum proident cillum laboris.
 
 		Et cillum tempor esse sit anim et veniam. Tempor magna irure ex ea id fugiat. Ex eu sint tempor quis exercitation amet ut deserunt sit fugiat aliquip nostrud nulla. Eu sunt laborum elit consectetur tempor sunt dolore in sunt reprehenderit voluptate dolore adipisicing. Proident eiusmod reprehenderit quis sint exercitation voluptate non labore. Sunt non sint in Lorem occaecat dolore tempor ipsum et proident sit Lorem ipsum officia.
-		"""))
+		""")
 		
-		feeds.append(Feed(imageName: "name",
+	static let feed2 = Feed(imageName: "name",
 						  title: "Header",
 						  author: "Author",
 						  description_mini: "He'll want to use your yacht, and I don't want this thing smelling like fish.",
@@ -51,9 +62,9 @@ private extension Feeds {
 		Ullamco laborum qui sint officia officia ad Lorem culpa minim voluptate occaecat id duis esse. Ullamco sunt magna consectetur excepteur. Id cupidatat proident ex ad elit laboris. Nulla aute sit occaecat laboris. Laboris minim aliquip exercitation elit commodo ipsum et fugiat sit anim laborum proident cillum laboris.
 
 		Et cillum tempor esse sit anim et veniam. Tempor magna irure ex ea id fugiat. Ex eu sint tempor quis exercitation amet ut deserunt sit fugiat aliquip nostrud nulla. Eu sunt laborum elit consectetur tempor sunt dolore in sunt reprehenderit voluptate dolore adipisicing. Proident eiusmod reprehenderit quis sint exercitation voluptate non labore. Sunt non sint in Lorem occaecat dolore tempor ipsum et proident sit Lorem ipsum officia.
-		"""))
+		""")
 		
-		feeds.append(Feed(imageName: "name",
+	static let feed3 = Feed(imageName: "name",
 						  title: "Header",
 						  author: "Author",
 						  description_mini: "He'll want to use your yacht, and I don't want this thing smelling like fish.",
@@ -67,9 +78,9 @@ private extension Feeds {
 		Ullamco laborum qui sint officia officia ad Lorem culpa minim voluptate occaecat id duis esse. Ullamco sunt magna consectetur excepteur. Id cupidatat proident ex ad elit laboris. Nulla aute sit occaecat laboris. Laboris minim aliquip exercitation elit commodo ipsum et fugiat sit anim laborum proident cillum laboris.
 
 		Et cillum tempor esse sit anim et veniam. Tempor magna irure ex ea id fugiat. Ex eu sint tempor quis exercitation amet ut deserunt sit fugiat aliquip nostrud nulla. Eu sunt laborum elit consectetur tempor sunt dolore in sunt reprehenderit voluptate dolore adipisicing. Proident eiusmod reprehenderit quis sint exercitation voluptate non labore. Sunt non sint in Lorem occaecat dolore tempor ipsum et proident sit Lorem ipsum officia.
-		"""))
+		""")
 		
-		feeds.append(Feed(imageName: "name",
+	static let feed4 = Feed(imageName: "name",
 						  title: "Header",
 						  author: "Author",
 						  description_mini: "He'll want to use your yacht, and I don't want this thing smelling like fish.",
@@ -83,6 +94,5 @@ private extension Feeds {
 		Ullamco laborum qui sint officia officia ad Lorem culpa minim voluptate occaecat id duis esse. Ullamco sunt magna consectetur excepteur. Id cupidatat proident ex ad elit laboris. Nulla aute sit occaecat laboris. Laboris minim aliquip exercitation elit commodo ipsum et fugiat sit anim laborum proident cillum laboris.
 
 		Et cillum tempor esse sit anim et veniam. Tempor magna irure ex ea id fugiat. Ex eu sint tempor quis exercitation amet ut deserunt sit fugiat aliquip nostrud nulla. Eu sunt laborum elit consectetur tempor sunt dolore in sunt reprehenderit voluptate dolore adipisicing. Proident eiusmod reprehenderit quis sint exercitation voluptate non labore. Sunt non sint in Lorem occaecat dolore tempor ipsum et proident sit Lorem ipsum officia.
-		"""))
-	}
+		""")
 }
