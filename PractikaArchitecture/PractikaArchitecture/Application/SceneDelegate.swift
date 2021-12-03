@@ -15,7 +15,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		guard let windowScene = (scene as? UIWindowScene) else { return }
 		let window = UIWindow(windowScene: windowScene)
 		
+        //change
+        let screenThreeVC = ScreenThreeViewController()
+        let navController = UINavigationController(rootViewController: screenThreeVC)
+        
 		self.window = window
+        self.window?.rootViewController = navController
 		self.window?.makeKeyAndVisible()
 		
 	}

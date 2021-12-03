@@ -11,6 +11,10 @@
 		970E9BDA275220F900E61032 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970E9BD9275220F900E61032 /* SceneDelegate.swift */; };
 		970E9BE1275220F900E61032 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 970E9BE0275220F900E61032 /* Assets.xcassets */; };
 		970E9BE4275220F900E61032 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 970E9BE2275220F900E61032 /* LaunchScreen.storyboard */; };
+		E92CA346275A19C500B127B8 /* ScreenThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92CA345275A19C500B127B8 /* ScreenThreeViewController.swift */; };
+		E92CA34C275A1ABF00B127B8 /* ScreenThreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92CA34B275A1ABF00B127B8 /* ScreenThreeView.swift */; };
+		E92CA34E275A1AD500B127B8 /* ScreenThreeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92CA34D275A1AD500B127B8 /* ScreenThreeModel.swift */; };
+		E92CA350275A264700B127B8 /* DataThreeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92CA34F275A264700B127B8 /* DataThreeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		970E9BE0275220F900E61032 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		970E9BE3275220F900E61032 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		970E9BE5275220F900E61032 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E92CA345275A19C500B127B8 /* ScreenThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenThreeViewController.swift; sourceTree = "<group>"; };
+		E92CA34B275A1ABF00B127B8 /* ScreenThreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenThreeView.swift; sourceTree = "<group>"; };
+		E92CA34D275A1AD500B127B8 /* ScreenThreeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenThreeModel.swift; sourceTree = "<group>"; };
+		E92CA34F275A264700B127B8 /* DataThreeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataThreeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +60,7 @@
 		970E9BD6275220F900E61032 /* PractikaArchitecture */ = {
 			isa = PBXGroup;
 			children = (
+				E92CA349275A1A0600B127B8 /* Screen-3 */,
 				970E9BEB2752213300E61032 /* Application */,
 				970E9BEF2752231600E61032 /* Modules */,
 				970E9BEC2752214200E61032 /* Resourses */,
@@ -83,6 +92,41 @@
 			children = (
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		E92CA347275A19DE00B127B8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E92CA345275A19C500B127B8 /* ScreenThreeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E92CA348275A19F100B127B8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E92CA34B275A1ABF00B127B8 /* ScreenThreeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E92CA349275A1A0600B127B8 /* Screen-3 */ = {
+			isa = PBXGroup;
+			children = (
+				E92CA34A275A1A2800B127B8 /* Model */,
+				E92CA348275A19F100B127B8 /* View */,
+				E92CA347275A19DE00B127B8 /* Controller */,
+			);
+			path = "Screen-3";
+			sourceTree = "<group>";
+		};
+		E92CA34A275A1A2800B127B8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E92CA34D275A1AD500B127B8 /* ScreenThreeModel.swift */,
+				E92CA34F275A264700B127B8 /* DataThreeModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,7 +200,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				970E9BD8275220F900E61032 /* AppDelegate.swift in Sources */,
+				E92CA350275A264700B127B8 /* DataThreeModel.swift in Sources */,
+				E92CA346275A19C500B127B8 /* ScreenThreeViewController.swift in Sources */,
 				970E9BDA275220F900E61032 /* SceneDelegate.swift in Sources */,
+				E92CA34C275A1ABF00B127B8 /* ScreenThreeView.swift in Sources */,
+				E92CA34E275A1AD500B127B8 /* ScreenThreeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
