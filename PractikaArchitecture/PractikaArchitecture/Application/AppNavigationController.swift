@@ -34,8 +34,6 @@ private extension AppNavigationController {
 	
 	func configureView() {
 		let feeds = FeedVC()
-		 
-		//self.setViewControllers([feeds], animated: true)
-		self.pushViewController(feeds, animated: true)
+		self.setViewControllers([feeds], animated: true)
 	}
 }
