@@ -64,6 +64,7 @@
 		970E9BD6275220F900E61032 /* PractikaArchitecture */ = {
 			isa = PBXGroup;
 			children = (
+				978FC6B1275A6970004197F7 /* Raw Data */,
 				970E9BEB2752213300E61032 /* Application */,
 				970E9C042752308400E61032 /* Modules */,
 				970E9C052752308900E61032 /* Raw Data */,
@@ -77,6 +78,7 @@
 			children = (
 				970E9BD7275220F900E61032 /* AppDelegate.swift */,
 				970E9BD9275220F900E61032 /* SceneDelegate.swift */,
+				978FC6B6275A6988004197F7 /* AppNavigationController.swift */,
 				970E9BE2275220F900E61032 /* LaunchScreen.storyboard */,
 				970E9BE5275220F900E61032 /* Info.plist */,
 			);
