@@ -15,6 +15,8 @@
 		E92CA34C275A1ABF00B127B8 /* ScreenThreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92CA34B275A1ABF00B127B8 /* ScreenThreeView.swift */; };
 		E92CA34E275A1AD500B127B8 /* ScreenThreeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92CA34D275A1AD500B127B8 /* ScreenThreeModel.swift */; };
 		E92CA350275A264700B127B8 /* DataThreeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92CA34F275A264700B127B8 /* DataThreeModel.swift */; };
+		E92CA354275A383200B127B8 /* Feeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92CA352275A383200B127B8 /* Feeds.swift */; };
+		E92CA355275A383200B127B8 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92CA353275A383200B127B8 /* Feed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		E92CA34B275A1ABF00B127B8 /* ScreenThreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenThreeView.swift; sourceTree = "<group>"; };
 		E92CA34D275A1AD500B127B8 /* ScreenThreeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenThreeModel.swift; sourceTree = "<group>"; };
 		E92CA34F275A264700B127B8 /* DataThreeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataThreeModel.swift; sourceTree = "<group>"; };
+		E92CA352275A383200B127B8 /* Feeds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feeds.swift; sourceTree = "<group>"; };
+		E92CA353275A383200B127B8 /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		970E9BD6275220F900E61032 /* PractikaArchitecture */ = {
 			isa = PBXGroup;
 			children = (
+				E92CA351275A383200B127B8 /* Raw Data */,
 				E92CA349275A1A0600B127B8 /* Screen-3 */,
 				970E9BEB2752213300E61032 /* Application */,
 				970E9BEF2752231600E61032 /* Modules */,
@@ -127,6 +132,15 @@
 				E92CA34F275A264700B127B8 /* DataThreeModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E92CA351275A383200B127B8 /* Raw Data */ = {
+			isa = PBXGroup;
+			children = (
+				E92CA352275A383200B127B8 /* Feeds.swift */,
+				E92CA353275A383200B127B8 /* Feed.swift */,
+			);
+			path = "Raw Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,11 +214,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				970E9BD8275220F900E61032 /* AppDelegate.swift in Sources */,
+				E92CA355275A383200B127B8 /* Feed.swift in Sources */,
 				E92CA350275A264700B127B8 /* DataThreeModel.swift in Sources */,
 				E92CA346275A19C500B127B8 /* ScreenThreeViewController.swift in Sources */,
 				970E9BDA275220F900E61032 /* SceneDelegate.swift in Sources */,
 				E92CA34C275A1ABF00B127B8 /* ScreenThreeView.swift in Sources */,
 				E92CA34E275A1AD500B127B8 /* ScreenThreeModel.swift in Sources */,
+				E92CA354275A383200B127B8 /* Feeds.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

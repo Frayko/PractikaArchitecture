@@ -9,19 +9,21 @@ import Foundation
 
 final class ScreenThreeModel {
     
-    private var someData: [String]?
+    private var data: DataThreeModel?
+    private var feeds: [Feed]?
+    private var id = UUID()
+    
+    private var newData: [Feed]?
+ 
 
-    func getData() -> [String] {
-        return [""]
+    func updateData(data: [Feed]) {
+        self.feeds = data
+        
+        print("update")
     }
     
-    func updateData(data: [String]) {
-        self.someData = data
+    func loadId(id: UUID) {
+        self.id = id
     }
-    
-    //    func getData() -> [Feed] {
-    //        let feed = [Feed]()
-    //        return feed
-    //    }
-    
+
 }
