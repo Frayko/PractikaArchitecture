@@ -7,11 +7,17 @@
 
 import UIKit
 
+protocol IFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+	
+}
+
 final class FeedVC: UIViewController {
 	private var feedModel: FeedModel
+	private let rootView: IFeedView
 	private let feeds: [Feed]
 	
 	init() {
+		self.rootView = FeedView()
 		self.feeds = Feeds.getFeeds()
 		self.feedModel = FeedModel()
 		super.init(nibName: nil, bundle: nil)
@@ -21,23 +27,17 @@ final class FeedVC: UIViewController {
 		fatalError("init(coder:) has not been implemented")
 	}
 	
-
-	private lazy var tableView: UITableView = {
-		let tableView = UITableView(frame: .zero, style: .plain)
-		tableView.rowHeight = FeedMetrics.tableRowHeight
-		tableView.register(FeedViewCell.self, forCellReuseIdentifier: FeedViewCell.identifier)
-		tableView.delegate = self
-		tableView.dataSource = self
-		return tableView
-	}()
-	
 	private lazy var logoutButton: UIBarButtonItem = {
 		let button = UIBarButtonItem(title: "Log out", style: .plain, target: self, action: #selector(close))
 		return button
 	}()
 
 	override func loadView() {
-		self.view = tableView
+		self.rootView.setTableViewDelegate(controller: self)
+		self.rootView.setTableViewDataSource(controller: self)
+		self.rootView.didLoad()
+		self.view = rootView
+		
 		self.navigationItem.leftBarButtonItem = self.logoutButton
 	}
 
@@ -45,6 +45,10 @@ final class FeedVC: UIViewController {
 		super.viewDidLoad()
 		self.title = "Feed"
 	}
+}
+
+extension FeedVC: IFeedVC {
+	
 }
 
 private extension FeedVC {
