@@ -33,7 +33,13 @@ private extension AppNavigationController {
 	}
 	
 	func configureView() {
-		let feeds = FeedVC()
-		self.setViewControllers([feeds], animated: true)
+		/*
+			сюда для проверки можно цеплять свои экраны, пример ниже
+		let firstScreen = FirstScreen()
+				 
+		self.setViewControllers([firstScreen], animated: true)
+			ИЛИ
+		self.pushViewController(firstScreen, animated: true)
+		*/
 	}
 }
