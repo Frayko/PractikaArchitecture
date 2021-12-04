@@ -11,6 +11,17 @@
 		970E9BDA275220F900E61032 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970E9BD9275220F900E61032 /* SceneDelegate.swift */; };
 		970E9BE1275220F900E61032 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 970E9BE0275220F900E61032 /* Assets.xcassets */; };
 		970E9BE4275220F900E61032 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 970E9BE2275220F900E61032 /* LaunchScreen.storyboard */; };
+		978FC6B4275A6970004197F7 /* Feeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FC6B2275A6970004197F7 /* Feeds.swift */; };
+		978FC6B5275A6970004197F7 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FC6B3275A6970004197F7 /* Feed.swift */; };
+		978FC6B7275A6988004197F7 /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FC6B6275A6988004197F7 /* AppNavigationController.swift */; };
+		A850C338275B587700D7F776 /* AppLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A850C337275B587700D7F776 /* AppLayout.swift */; };
+		A850C33B275B58C500D7F776 /* AppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A850C33A275B58C500D7F776 /* AppText.swift */; };
+		A850C33E275B58DB00D7F776 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A850C33D275B58DB00D7F776 /* AppColors.swift */; };
+		A850C341275B58F200D7F776 /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A850C340275B58F200D7F776 /* AppFonts.swift */; };
+		A850C34E275B591C00D7F776 /* MainAssemler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A850C347275B591C00D7F776 /* MainAssemler.swift */; };
+		A850C34F275B591C00D7F776 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A850C349275B591C00D7F776 /* MainController.swift */; };
+		A850C350275B591C00D7F776 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A850C34B275B591C00D7F776 /* MainModel.swift */; };
+		A850C351275B591C00D7F776 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A850C34D275B591C00D7F776 /* MainView.swift */; };
 		970E9C10275230E600E61032 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970E9C0F275230E600E61032 /* Feed.swift */; };
 		970E9C122752333500E61032 /* Feeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970E9C112752333500E61032 /* Feeds.swift */; };
 		978FC6B9275A6BE9004197F7 /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FC6B8275A6BE9004197F7 /* AppNavigationController.swift */; };

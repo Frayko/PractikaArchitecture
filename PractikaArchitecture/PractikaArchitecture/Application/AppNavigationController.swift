@@ -33,13 +33,11 @@ private extension AppNavigationController {
 	}
 	
 	func configureView() {
-		/*
-			сюда для проверки можно цеплять свои экраны, пример ниже
-		let firstScreen = FirstScreen()
-				 
+        let firstScreen = MainAssembler.assemble()
+		 
 		self.setViewControllers([firstScreen], animated: true)
-			ИЛИ
-		self.pushViewController(firstScreen, animated: true)
-		*/
+//			ИЛИ
+//		self.pushViewController(firstScreen, animated: true)
+		 
 	}
 }
