@@ -8,7 +8,7 @@
 import UIKit
 
 final class FeedVC: UIViewController {
-	private var feedModel: FeedModel?
+	private var feedModel: FeedModel
 	private let feeds: [Feed]
 	
 	init() {
@@ -24,7 +24,7 @@ final class FeedVC: UIViewController {
 
 	private lazy var tableView: UITableView = {
 		let tableView = UITableView(frame: .zero, style: .plain)
-		tableView.rowHeight = 93
+		tableView.rowHeight = FeedMetrics.tableRowHeight
 		tableView.register(FeedViewCell.self, forCellReuseIdentifier: FeedViewCell.identifier)
 		tableView.delegate = self
 		tableView.dataSource = self
@@ -38,12 +38,12 @@ final class FeedVC: UIViewController {
 
 	override func loadView() {
 		self.view = tableView
+		self.navigationItem.leftBarButtonItem = self.logoutButton
 	}
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.title = "Feed"
-		self.navigationItem.leftBarButtonItem = self.logoutButton
 	}
 }
 
@@ -60,33 +60,22 @@ extension FeedVC: UITableViewDataSource {
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: FeedViewCell.identifier, for: indexPath) as! FeedViewCell
+		
 		let feed = self.feeds[indexPath.row]
-		feedModel?.setImageName(feed.imageName)
-		feedModel?.setTitle(feed.title)
-		feedModel?.setDescription(feed.description_mini)
+		feedModel.setImageName(feed.imageName)
+		feedModel.setTitle(feed.title)
+		feedModel.setDescription(feed.description_mini)
 		
-		guard
-			let imageName = feedModel?.getImageName(),
-			let title = feedModel?.getTitle(),
-			let description = feedModel?.getDescription()
-		else {
-			return cell
-		}
-		
-		cell.setImage(imageName: imageName)
-		cell.setTitle(title)
-		cell.setDescription(description)
+		cell.setImage(imageName: feedModel.getImageName())
+		cell.setTitle(feedModel.getTitle())
+		cell.setDescription(feedModel.getDescription())
 		return cell
 	}
-
-
 }
 
 extension FeedVC: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		guard indexPath.row > 0 else { return }
-		//let vc = DetailViewController()
-		//self.present(vc, animated: true)
+		tableView.deselectRow(at: indexPath, animated: true)
 		let feeds = FeedVC()
 		self.navigationController?.pushViewController(feeds, animated: true)
 	}

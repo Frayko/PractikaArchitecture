@@ -12,38 +12,38 @@ final class FeedViewCell: UITableViewCell {
 	
 	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
 		super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
-		self.initialSetup()
+		self.configureUI()
 		self.configureImage()
+		self.configureText()
+		self.configureDetailText()
 	}
 	
 	required init?(coder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
-	
-	private func initialSetup() {
-		self.imageView?.contentMode = .scaleAspectFit
-		self.detailTextLabel?.textColor = .label
-		self.detailTextLabel?.numberOfLines = 2
-		self.backgroundColor = .systemBackground
-	}
-
-	private func configureImage() {
-		self.imageView?.layer.cornerRadius = 12
-		self.imageView?.layer.opacity = 0.8
-	}
 
 	override func layoutSubviews() {
 		super.layoutSubviews()
-		self.imageView?.frame = .init(x: 16, y: self.bounds.height / 6, width: 52, height: 52)
-		self.textLabel?.frame.origin = .init(x: 84, y: 16)
-		self.detailTextLabel?.frame.origin = .init(x: 84, y: 43)
+		self.imageView?.frame = .init(x: FeedMetrics.cellImageViewX,
+									  y: self.bounds.height / 6,
+									  width: FeedMetrics.cellImageViewSize,
+									  height: FeedMetrics.cellImageViewSize)
+		
+		self.textLabel?.frame = .init(x: FeedMetrics.cellTextX,
+									  y: FeedMetrics.cellTitleTextLabelY,
+									  width: FeedMetrics.cellTextWidth,
+									  height: FeedMetrics.cellTitleTextHeight)
+		
+		self.detailTextLabel?.frame = .init(x: FeedMetrics.cellTextX,
+											y: FeedMetrics.cellDetailTextViewY,
+											width: FeedMetrics.cellTextWidth,
+											height: FeedMetrics.cellDetailTextHeight)
 	}
 }
 
 extension FeedViewCell {
 	func setImage(imageName: String) {
 		self.imageView?.image = UIImage(named: imageName) ?? UIImage()
-		self.imageView?.backgroundColor = .lightGray
 	}
 	
 	func setTitle(_ text: String) {
@@ -52,5 +52,28 @@ extension FeedViewCell {
 	
 	func setDescription(_ text: String) {
 		self.detailTextLabel?.text = text
+	}
+}
+
+private extension FeedViewCell {
+	func configureUI() {
+		self.backgroundColor = .systemBackground
+	}
+	
+	func configureDetailText() {
+		self.detailTextLabel?.textColor = .label
+		self.detailTextLabel?.numberOfLines = 2
+		self.detailTextLabel?.font = UIFont.systemFont(ofSize: 14)
+	}
+	
+	func configureText() {
+		self.textLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+	}
+
+	func configureImage() {
+		self.imageView?.contentMode = .scaleAspectFit
+		self.imageView?.layer.cornerRadius = FeedMetrics.cellImageViewRadius
+		self.imageView?.layer.opacity = FeedMetrics.cellImageViewOpacity
+		self.imageView?.backgroundColor = .systemGray6
 	}
 }
