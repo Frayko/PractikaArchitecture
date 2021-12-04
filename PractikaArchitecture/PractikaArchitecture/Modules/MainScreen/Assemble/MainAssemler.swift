@@ -7,8 +7,7 @@
 
 import Foundation
 
-final class MainAssembler {
-    
+enum MainAssembler {
     static func assemble() -> MainController {
         let model = MainModel()
         let controller = MainController(dependencies: .init(model: model))

@@ -13,7 +13,7 @@ protocol IMainController: AnyObject {
     func dismissKeyboard()
 }
 
-class MainController: UIViewController {
+final class MainController: UIViewController {
 
     // MARK: Properties
     private var code: Int?

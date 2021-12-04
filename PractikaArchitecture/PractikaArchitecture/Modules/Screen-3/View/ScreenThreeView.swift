@@ -35,7 +35,6 @@ final class ScreenThreeView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
 		label.font = .systemFont(ofSize: 24, weight: .semibold)
-        label.text = "Post Title Here..."
         return label
     }()
     
@@ -43,7 +42,6 @@ final class ScreenThreeView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
 		label.font = .systemFont(ofSize: 16, weight: .semibold)
-        label.text = "Author"
         return label
     }()
     
@@ -57,7 +55,6 @@ final class ScreenThreeView: UIView {
 		textView.textContainer.lineFragmentPadding = 0
 		textView.isSelectable = true
 		textView.isScrollEnabled = false
-        textView.text = "Description here..."
         return textView
     }()
 }
@@ -66,7 +63,7 @@ extension ScreenThreeView: IScreenThreeView {
     func configureView() {
 		self.backgroundColor = .systemBackground
 		
-		//self.addSubview(self.scrollView)
+		self.addSubview(self.scrollView)
 		self.scrollView.addSubview(imageView)
 		self.scrollView.addSubview(titleLabel)
 		self.scrollView.addSubview(authorLabel)
@@ -138,7 +135,6 @@ private extension ScreenThreeView {
 	
 	func setupScrollView() {
 		let safeArea = self.safeAreaLayoutGuide
-		self.addSubview(scrollView)
 
 		NSLayoutConstraint.activate([
 			scrollView.frameLayoutGuide.topAnchor.constraint(equalTo: safeArea.topAnchor),

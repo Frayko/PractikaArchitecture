@@ -17,7 +17,7 @@ protocol IMainView: UIView {
     func loadView(controller: IMainController)
 }
 
-class MainView: UIView {
+final class MainView: UIView {
     
     // MARK: - Properties
     private weak var controller: IMainController?
