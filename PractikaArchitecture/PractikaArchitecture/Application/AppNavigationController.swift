@@ -18,7 +18,7 @@ final class AppNavigationController: UINavigationController {
 private extension AppNavigationController {
 	func configureNavigationController() {
 		let attrs = [
-			NSAttributedString.Key.font: UIFont.systemFont(ofSize: 30, weight: .bold)
+			NSAttributedString.Key.font: UIFont.systemFont(ofSize: 28, weight: .bold)
 		]
 		let appearance = UINavigationBarAppearance()
 		appearance.configureWithOpaqueBackground()
@@ -26,18 +26,12 @@ private extension AppNavigationController {
 		appearance.backgroundColor = .systemBackground
 		navigationBar.standardAppearance = appearance
 		navigationBar.scrollEdgeAppearance = navigationBar.standardAppearance
-		
-		self.navigationBar.backIndicatorImage = UIImage()
-		self.navigationBar.backIndicatorTransitionMaskImage = UIImage()
+
 		self.navigationBar.tintColor = .systemGreen
 	}
 	
 	func configureView() {
         let firstScreen = MainAssembler.assemble()
-		 
 		self.setViewControllers([firstScreen], animated: true)
-//			ИЛИ
-//		self.pushViewController(firstScreen, animated: true)
-		 
 	}
 }

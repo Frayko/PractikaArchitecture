@@ -15,6 +15,8 @@ enum AppLayout {
         
         static let heightTextField: CGFloat = 50.0
         static let heightButton: CGFloat = 50.0
+		
+		static let textFieldBorderWidth: CGFloat = 0.5
         
         // MARK: - StackView
         static let topScrollView: CGFloat = 32.0

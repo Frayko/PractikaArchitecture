@@ -49,6 +49,7 @@ class MainController: UIViewController {
         super.viewDidLoad()
         registerForKeyboardNotifications()
         rootView.showNumberFields()
+		self.title = "Log In"
     }
     
     override func viewWillDisappear(_ animated: Bool) {

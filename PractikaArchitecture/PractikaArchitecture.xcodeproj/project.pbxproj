@@ -27,6 +27,10 @@
 		97F8621A275B6D8D00087D8B /* AppLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F86216275B6D8D00087D8B /* AppLayout.swift */; };
 		97F8621B275B6D8D00087D8B /* AppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F86217275B6D8D00087D8B /* AppText.swift */; };
 		97F8621C275B6D8D00087D8B /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F86218275B6D8D00087D8B /* AppFonts.swift */; };
+		97F86231275B7A7300087D8B /* ScreenThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F8622B275B7A7300087D8B /* ScreenThreeViewController.swift */; };
+		97F86232275B7A7300087D8B /* DataThreeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F8622D275B7A7300087D8B /* DataThreeModel.swift */; };
+		97F86233275B7A7300087D8B /* ScreenThreeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F8622E275B7A7300087D8B /* ScreenThreeModel.swift */; };
+		97F86234275B7A7300087D8B /* ScreenThreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F86230275B7A7300087D8B /* ScreenThreeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +56,10 @@
 		97F86216275B6D8D00087D8B /* AppLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLayout.swift; sourceTree = "<group>"; };
 		97F86217275B6D8D00087D8B /* AppText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppText.swift; sourceTree = "<group>"; };
 		97F86218275B6D8D00087D8B /* AppFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
+		97F8622B275B7A7300087D8B /* ScreenThreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenThreeViewController.swift; sourceTree = "<group>"; };
+		97F8622D275B7A7300087D8B /* DataThreeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataThreeModel.swift; sourceTree = "<group>"; };
+		97F8622E275B7A7300087D8B /* ScreenThreeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenThreeModel.swift; sourceTree = "<group>"; };
+		97F86230275B7A7300087D8B /* ScreenThreeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenThreeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +179,7 @@
 			children = (
 				97F86206275B6D3C00087D8B /* MainScreen */,
 				978FC6C7275A6E02004197F7 /* Screen-2 */,
+				97F86229275B7A7300087D8B /* Screen-3 */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -235,6 +244,41 @@
 				97F86218275B6D8D00087D8B /* AppFonts.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		97F86229275B7A7300087D8B /* Screen-3 */ = {
+			isa = PBXGroup;
+			children = (
+				97F8622A275B7A7300087D8B /* Controller */,
+				97F8622C275B7A7300087D8B /* Model */,
+				97F8622F275B7A7300087D8B /* View */,
+			);
+			path = "Screen-3";
+			sourceTree = "<group>";
+		};
+		97F8622A275B7A7300087D8B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				97F8622B275B7A7300087D8B /* ScreenThreeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		97F8622C275B7A7300087D8B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				97F8622D275B7A7300087D8B /* DataThreeModel.swift */,
+				97F8622E275B7A7300087D8B /* ScreenThreeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		97F8622F275B7A7300087D8B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				97F86230275B7A7300087D8B /* ScreenThreeView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,16 +358,20 @@
 				97F86219275B6D8D00087D8B /* AppColors.swift in Sources */,
 				978FC6B9275A6BE9004197F7 /* AppNavigationController.swift in Sources */,
 				978FC6CD275A6E30004197F7 /* FeedMetrics.swift in Sources */,
+				97F86234275B7A7300087D8B /* ScreenThreeView.swift in Sources */,
 				970E9BD8275220F900E61032 /* AppDelegate.swift in Sources */,
 				97F86210275B6D3C00087D8B /* MainController.swift in Sources */,
 				970E9C10275230E600E61032 /* Feed.swift in Sources */,
 				97F8621A275B6D8D00087D8B /* AppLayout.swift in Sources */,
 				978FC6D1275A6E3F004197F7 /* FeedVC.swift in Sources */,
+				97F86231275B7A7300087D8B /* ScreenThreeViewController.swift in Sources */,
 				97F8621C275B6D8D00087D8B /* AppFonts.swift in Sources */,
+				97F86232275B7A7300087D8B /* DataThreeModel.swift in Sources */,
 				978FC6D3275A6E4B004197F7 /* FeedViewCell.swift in Sources */,
 				978FC6CF275A6E37004197F7 /* FeedModel.swift in Sources */,
 				97F8620F275B6D3C00087D8B /* MainAssemler.swift in Sources */,
 				970E9BDA275220F900E61032 /* SceneDelegate.swift in Sources */,
+				97F86233275B7A7300087D8B /* ScreenThreeModel.swift in Sources */,
 				970E9C122752333500E61032 /* Feeds.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

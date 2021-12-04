@@ -80,7 +80,10 @@ extension FeedVC: UITableViewDataSource {
 extension FeedVC: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		tableView.deselectRow(at: indexPath, animated: true)
-		let feeds = FeedVC()
-		self.navigationController?.pushViewController(feeds, animated: true)
+		
+		let feedData = self.feeds[indexPath.item]
+		
+		let feed = ScreenThreeViewController(id: feedData.id)
+		self.navigationController?.pushViewController(feed, animated: true)
 	}
 }

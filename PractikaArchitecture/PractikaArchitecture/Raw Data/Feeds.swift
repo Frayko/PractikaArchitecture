@@ -33,7 +33,7 @@ extension Feeds {
 
 enum RawFeeds {
 	static let feed1 = Feed(imageName: "name",
-						  title: "Header",
+						  title: "Header1",
 						  author: "Author",
 						  description_mini: "He'll want to use your yacht, and I don't want this thing smelling like fish.",
 						  description_max: """
@@ -49,7 +49,7 @@ enum RawFeeds {
 		""")
 		
 	static let feed2 = Feed(imageName: "name",
-						  title: "Header",
+						  title: "Header2",
 						  author: "Author",
 						  description_mini: "He'll want to use your yacht, and I don't want this thing smelling like fish.",
 						  description_max: """
@@ -65,7 +65,7 @@ enum RawFeeds {
 		""")
 		
 	static let feed3 = Feed(imageName: "name",
-						  title: "Header",
+						  title: "Header3",
 						  author: "Author",
 						  description_mini: "He'll want to use your yacht, and I don't want this thing smelling like fish.",
 						  description_max: """
@@ -81,7 +81,7 @@ enum RawFeeds {
 		""")
 		
 	static let feed4 = Feed(imageName: "name",
-						  title: "Header",
+						  title: "Header4",
 						  author: "Author",
 						  description_mini: "He'll want to use your yacht, and I don't want this thing smelling like fish.",
 						  description_max: """

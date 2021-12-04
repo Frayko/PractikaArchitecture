@@ -31,15 +31,13 @@ class MainView: UIView {
     }()
     
     private lazy var stackView: UIStackView = {
-        let view = UIStackView(arrangedSubviews: [titleLabel, numberTextField, authCodeTextField,
+        let view = UIStackView(arrangedSubviews: [numberTextField, authCodeTextField,
                                                   getAuthCodeButton, logInButton])
         view.translatesAutoresizingMaskIntoConstraints = false
         view.axis = .vertical
         view.distribution = .fill
         view.alignment = .fill
         view.spacing = AppLayout.Main.spacingStackView
-        view.setCustomSpacing(AppLayout.Main.customSpacingAfterTitleLabel,
-                              after: titleLabel)
         view.setCustomSpacing(AppLayout.Main.customSpacingAfterTextField,
                               after: authCodeTextField)
         view.backgroundColor = AppColors.background
@@ -52,15 +50,6 @@ class MainView: UIView {
         return scrollView
     } ()
     
-    private let titleLabel: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 0
-        label.text = AppText.Main.logIn
-        label.textAlignment = .center
-        label.font = AppFonts.systemBold
-        return label
-    }()
-    
     private lazy var numberTextField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -68,6 +57,9 @@ class MainView: UIView {
         textField.placeholder = AppText.Main.numberPlaceHolder
         textField.backgroundColor = AppColors.contentBackground
         textField.layer.masksToBounds = true
+		textField.layer.borderWidth = AppLayout.Main.textFieldBorderWidth
+		textField.layer.borderColor = AppColors.textFieldBorderColor
+		textField.layer.sublayerTransform = CATransform3DMakeTranslation(16, 0, 0)
         textField.layer.cornerRadius = AppLayout.Main.cornerRadiusTextField
         return textField
     }()
@@ -79,6 +71,9 @@ class MainView: UIView {
         textField.placeholder = AppText.Main.authCodePlaceHolder
         textField.backgroundColor = AppColors.contentBackground
         textField.layer.masksToBounds = true
+		textField.layer.borderWidth = AppLayout.Main.textFieldBorderWidth
+		textField.layer.borderColor = AppColors.textFieldBorderColor
+		textField.layer.sublayerTransform = CATransform3DMakeTranslation(16, 0, 0)
         textField.layer.cornerRadius = AppLayout.Main.cornerRadiusTextField
         return textField
     }()
@@ -204,6 +199,7 @@ extension MainView: IMainView {
     func showNumberFields() {
         authCodeTextField.isEnabled = false
         authCodeTextField.backgroundColor = .clear
+		authCodeTextField.layer.borderWidth = 0
         authCodeTextField.attributedPlaceholder = NSAttributedString(string: AppText.Main.authCodePlaceHolder,
                                                                      attributes: [NSAttributedString.Key.foregroundColor: UIColor.clear])
         logInButton.isEnabled = false
@@ -215,6 +211,7 @@ extension MainView: IMainView {
     func showAllFields() {
         authCodeTextField.isEnabled = true
         authCodeTextField.backgroundColor = AppColors.contentBackground
+		authCodeTextField.layer.borderWidth = AppLayout.Main.textFieldBorderWidth
         authCodeTextField.attributedPlaceholder = NSAttributedString(string: AppText.Main.authCodePlaceHolder,
                                                                      attributes: [NSAttributedString.Key.foregroundColor: AppColors.placeHolderColor])
         logInButton.isEnabled = true

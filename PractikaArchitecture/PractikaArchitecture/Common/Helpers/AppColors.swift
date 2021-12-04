@@ -9,9 +9,10 @@ import UIKit
 
 enum AppColors {
     static let buttonColor = UIColor(named: "colorButton")
-    static let textColor = UIColor.black
-    static let buttonTextColor = UIColor.black
+	static let textColor = UIColor.black
+    static let buttonTextColor = UIColor.white
     static let placeHolderColor = UIColor.systemGray3
-    static let background = UIColor.systemGray5
-    static let contentBackground = UIColor.systemBackground
+	static let background = UIColor.systemBackground
+	static let textFieldBorderColor = UIColor.systemGray4.cgColor
+    static let contentBackground = UIColor.systemGray6
 }
