@@ -58,7 +58,8 @@ class MainController: UIViewController {
     
     // MARK: - Navigation
     private func goToList() {
-        
+        let feedVC = FeedVC()
+		self.navigationController?.pushViewController(feedVC, animated: true)
     }
     
     // MARK: - Keyboard

@@ -64,7 +64,7 @@ class MainView: UIView {
     private lazy var numberTextField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.keyboardType = .numberPad
+		textField.keyboardType = .numberPad
         textField.placeholder = AppText.Main.numberPlaceHolder
         textField.backgroundColor = AppColors.contentBackground
         textField.layer.masksToBounds = true
@@ -75,7 +75,7 @@ class MainView: UIView {
     private lazy var authCodeTextField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.keyboardType = .numberPad
+		textField.keyboardType = .numberPad
         textField.placeholder = AppText.Main.authCodePlaceHolder
         textField.backgroundColor = AppColors.contentBackground
         textField.layer.masksToBounds = true
